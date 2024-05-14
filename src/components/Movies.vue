@@ -1,6 +1,5 @@
 <template>
 
-
     <div class="row row-cols-1 row-cols-md-4 g-4" >
         <div class="col"  v-for="(movie,key) in ObjectMovies.results.slice(0,3)" :key="key">
             <div class="card">
@@ -19,25 +18,12 @@
                 </div>
             </div>
         </div>
-        
-    </div>
-
-    <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                <li class="page-item" :class="{ 'disabled': pageNumber === 1 }">
-                <button class="page-link" @click="prevPage">Précédent</button>
-                </li>
-                
-                <li class="page-item" :class="{ 'disabled': pageNumber === totalPages }">
-                <button Class="page-link" @click="nextPage">Suivant</button>
-                </li>
-            </ul>
-        </nav>
-    
+    </div>    
 </template>
 
 <script>
     export default {
+
         props: {
             ObjectMovies: {
                 type: Object,
@@ -64,23 +50,7 @@
                 totalPages : this.ObjectMovies.total_pages,
             }
         },
-        methods: {
-            changepage(page){
-                this.pageNumber = page ;
-            },
-            nextPage() {
-                if (this.pageNumber < this.totalPages) {
-                this.pageNumber++;
-                    // Vous devrez implémenter une méthode pour charger les films de la page actuelle ici
-                }
-            },
-            prevPage() {
-                if (this.pageNumber > 1) {
-                this.pageNumber--;
-                    // Vous devrez implémenter une méthode pour charger les films de la page actuelle ici
-                }
-            },
-        },
+       
 
         
     }

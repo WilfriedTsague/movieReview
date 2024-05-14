@@ -14,7 +14,6 @@
                 motCle:"",
                 movies:null,
                 //filterName:"",
-
             }
         },
         created() {
