@@ -12,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <RouterLink to="/"  class="nav-link">Accueil</RouterLink>
-            </li>
+             <RouterLink to="/movies"  class="nav-link">Recheches</RouterLink> </li>
             <!-- <li class="nav-item">
               <RouterLink to="/movies" class="nav-link">Movies</RouterLink>
             </li> -->

@@ -7,7 +7,7 @@ const options = {
     }
   };
 
-  let nameQuery = "";
+  let nameQuery = '';
   let pagenumber = 1;
   
   
@@ -22,5 +22,6 @@ const options = {
   {
     const response =  await fetch('https://api.themoviedb.org/3/search/movie?query='+nameQuery+'&include_adult=false&language=en-US&page='+pagenumber, options)
 
+    console.log(response);
     return await response.json();
   }

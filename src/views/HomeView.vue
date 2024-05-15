@@ -19,7 +19,9 @@
         created() {
             getMovie_NowPlaying().then(response => this.movies = response)
             // getMovie_NowPlaying().then(response => console.log(response))
+            
         },
+        
         
     }
 </script>
